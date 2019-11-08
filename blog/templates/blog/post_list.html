@@ -3,7 +3,7 @@
 <head>
 <title>Webpage</title>
 <body bgcolor=
- 	  
+
  	  #5CBDFA
  	  #61C4FC
   #66CCFF
@@ -44,15 +44,28 @@ let's try another thing. I have setted a mark which is our home page (above).
 <video width="800" height="600" controls>
   <source src="manwaa.mp4" type="video/mp4">
   <source src="manwaa.ogg" type="video/ogg">
-  
+
 </video><br><br><br>
 <hr>
-<p><b>Iam testing the mark tag </b>that is why this sentence and the other will be like this with many spaces inbetween. <p> and a <br> few<br>more lines<br> Give me some more songs<p> I will add it to this web site and recreate<br> if you dont want to<br> then its<br> ok<br>
-If anyone knows more tags and attributes he/she can please contact me.<p> I am KARTIK RAI<br>  The creator of this page<br><p>If you want to know<br>
-how i made this page then also i am free to discuss<br>these lines are getting too long as iam testing my mrk tag.<br> line<br> line<br> and that's it i think<br></p>
+
+
+        <div>
+            <h1><a href="/">Django Blog</a></h1>
+
+        </div>
+        {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+      {% endfor %}
+
+
+
 <marquee width=50% behavior=alternate direction=right bgcolor=yellow>Now the below link go to top will lead you</marquee><br>
-<p>to "home page" above.<br>  
+<p>to "home page" above.<br>
 <left>Now the link to<a href="#HOME PAGE" onclick="youFunction()"> go to top</a></left>
-<p> &lt; and &gt; and &amp; </p></font>
+
 </body>
 </html>
