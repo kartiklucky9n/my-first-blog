@@ -1,0 +1,63 @@
+{% load static %}
+
+<html>
+<head>
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}" type="text/css">
+</head>
+<title>Webpage</title>
+<body >
+  <font size= 5 color= "green"><center><h1>
+    <a name="HOME PAGE">
+      <a href="farmes.htm" target="_blank"> HOME PAGE</a>
+    </a></h1> </center>
+  </font>
+<br><br><br>
+<button class="button" onclick="myFunction()" >
+  <span>
+Red
+</span>
+</button>
+
+<button class="button" onclick="youFunction()">
+  <span>
+Blue
+</span>
+</button>
+
+<script>
+function myFunction() {
+    document.body.style.background = "red";
+}
+</script>
+<script>
+function youFunction() {
+    document.body.style.background="blue";
+}
+</script>
+<br><br><br>
+<hr>
+
+
+<div class="page-header">
+<h1><a href="/">Django Blog</a></h1>
+</div>
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+
+<marquee width=50% behavior=alternate direction=right bgcolor=yellow>Now the below link go to top will lead you</marquee><br>
+<p>to "home page" above.<br>
+<left>Now the link to<a href="#HOME PAGE" onclick="youFunction()"> go to top</a></left>
+
+</body>
+</html>
